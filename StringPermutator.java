@@ -1,3 +1,4 @@
+/* this program improve by loay al-ajramy */
 import java.util.Scanner;
 public class StringPermutator {
 public static int [] CalculateFactorialsArray(int stringLength) {
