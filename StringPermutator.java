@@ -43,7 +43,7 @@ String string = scanner.nextLine();
 scanner.close();
 
 if((string == null) || (string.trim().isEmpty())) {
-System.out.println("Can not find permutations for Empty string");
+System.out.println("erorr, you must input ");
 }
 else GetPermutationsOfGivenString(string);
 }
