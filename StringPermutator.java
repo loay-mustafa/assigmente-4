@@ -43,7 +43,7 @@ String string = scanner.nextLine();
 scanner.close();
 
 if((string == null) || (string.trim().isEmpty())) {
-System.out.println("erorr, you must input ");
+System.out.println("erorr, you must input string value ");
 }
 else GetPermutationsOfGivenString(string);
 }
