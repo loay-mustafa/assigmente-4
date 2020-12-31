@@ -5,7 +5,7 @@
 /* the program print all permutation we can improve it to print permutation without dublicate*/ 
 import java.util.Scanner;
 public class StringPermutator2 {
-    private static void printPermutationsIterative(String string){
+    private static void PrintPermutationsIterative(String string){
      int [] factorials = new int[string.length()+1];  //Array  to handle factorial of integers
         factorials[0] = 1;
         for (int i = 1; i<=string.length();i++) {
@@ -14,15 +14,15 @@ public class StringPermutator2 {
 
         for (int i = 0; i < factorials[string.length()]; i++) {
             String onePermutation="";      //  vriable to handle permutation for each loop
-            String Temporary = string;      // Temporary variable equal input string
+            String temporary = string;      // Temporary variable equal input string
             int positionCode = i;
             for (int position = string.length(); position > 0 ;position--){ 
                 /*all permutation have N! of possibilities,
                 each number from one to N! hse one permutation.*/
                 int selected = positionCode / factorials[position-1];
-                onePermutation += Temporary.charAt(selected);
+                onePermutation += temporary.charAt(selected);
                 positionCode = positionCode % factorials[position-1];
-                Temporary = Temporary.substring(0,selected) + Temporary.substring(selected+1);
+                temporary = temporary.substring(0,selected) + temporary.substring(selected+1);
             }
             System.out.println(onePermutation);      // print permutation
 
@@ -40,7 +40,7 @@ public static void main(String[] args) {
      System.out.println("erorr, you must input  value to permutate  ");
 }
       else {
-        printPermutationsIterative(string);     // Call a function to find Permutations
+        PrintPermutationsIterative(string);     // Call a function to find Permutations
          scanner.close();
          break;
 }}}}
